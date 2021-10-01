@@ -30,7 +30,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Home_main_container{
-  widows: 100vw;
+  width: 100vw;
 }
 </style>
 

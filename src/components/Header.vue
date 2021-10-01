@@ -39,29 +39,28 @@ export default {
 
 <style scoped lang="scss">
 $orange: #f9bb3d;
-  @font-face {
-    font-family: "OS_exbold";
-    src: url("../assets/font/OpenSans-ExtraBold.ttf");
-  }
-  @font-face {
-    font-family: "OS_light";
-    src: url("../assets/font/OpenSans-Light.ttf");
-  }
-  @font-face {
-    font-family: "OS_medium";
-    src: url("../assets/font/OpenSans-Medium.ttf");
-  }
-  @font-face {
-    font-family: "OS_regular";
-    src: url("../assets/font/OpenSans-Regular.ttf");
-  }
-  @font-face {
-    font-family: "OS_semiBold";
-    src: url("../assets/font/OpenSans-SemiBold.ttf");
-  }
+@font-face {
+  font-family: "OS_exbold";
+  src: url("../assets/font/OpenSans-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "OS_light";
+  src: url("../assets/font/OpenSans-Light.ttf");
+}
+@font-face {
+  font-family: "OS_medium";
+  src: url("../assets/font/OpenSans-Medium.ttf");
+}
+@font-face {
+  font-family: "OS_regular";
+  src: url("../assets/font/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "OS_semiBold";
+  src: url("../assets/font/OpenSans-SemiBold.ttf");
+}
 
 @media screen and (min-width: 500px) {
-
   .Header_main_container {
     position: fixed;
     width: 100vw;
@@ -70,11 +69,10 @@ $orange: #f9bb3d;
     display: grid;
     width: 100%;
     background-color: rgba(32, 32, 32, 0.5);
-padding: 10px;
-    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-columns: 2fr 3.5fr 2fr;
     .Header_logo {
       display: grid;
-      padding: 5px;
+      padding: 10px 0px;
       justify-content: center;
       align-items: center;
       img {
@@ -83,8 +81,8 @@ padding: 10px;
     }
     .Header_salutation {
       display: grid;
+      padding: 10px 0px;
       grid-auto-rows: 40px;
-      padding: 20px;
       justify-content: flex-start;
       align-content: center;
 
@@ -99,30 +97,30 @@ padding: 10px;
         font-family: "OS_exbold";
         margin: 0px;
         text-align: left;
-         font-size: 40px;
+        font-size: 40px;
         color: $orange;
       }
     }
     .Header_profil_lien {
-      width: 100%;
-      height: 100%;
+      display: grid;
+      padding: 10px 0px;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+      align-items: center;
       .Header_div_picto_profil {
         display: grid;
-         height: 100%;
-        padding: 2px;
         justify-items: center;
         align-items: center;
-        img {
-          width: 40%;
-        }
+      }
+      img {
+        width: 70%;
       }
     }
   }
 }
 
 @media screen and (max-width: 500px) {
- 
-
   .Header_main_container {
     position: fixed;
     width: 100vw;
@@ -145,7 +143,6 @@ padding: 10px;
     .Header_salutation {
       display: grid;
       grid-auto-rows: 25px;
-      padding: 10px;
       justify-content: flex-start;
       align-content: center;
 
@@ -160,7 +157,7 @@ padding: 10px;
         font-family: "OS_exbold";
         margin: 0px;
         text-align: left;
-         font-size: 1em;
+        font-size: 1em;
         color: $orange;
       }
     }
@@ -169,7 +166,7 @@ padding: 10px;
       height: 100%;
       .Header_div_picto_profil {
         display: grid;
-         height: 100%;
+        height: 100%;
         padding: 2px;
         justify-items: center;
         align-items: center;

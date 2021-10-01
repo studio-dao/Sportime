@@ -67,7 +67,7 @@ $orange: #f9bb3d;
     .Homepage_container_sorties {
       width: 100%;
       min-height: 200px;
-      padding: 20px 5px;
+      padding: 20px 0px;
       margin: 10% 0% 10% 0%;
       background: linear-gradient(
         34deg,

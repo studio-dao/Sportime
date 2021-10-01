@@ -181,7 +181,7 @@ $font-size2: 27px;
           font-size: 4em;
         }
         .PrevMesSorties_content_card_preview {
-          width: 100%;
+          width: 80%;
           border: 1px solid white;
           border-radius: 5px;
           display: grid;
@@ -193,7 +193,7 @@ $font-size2: 27px;
             align-items: center;
             border-right: 1px solid white;
             img {
-              width: 80px;
+              width: 60px;
             }
           }
           .card_preview_lieu_et_date {

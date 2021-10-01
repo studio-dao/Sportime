@@ -1,5 +1,10 @@
 <template>
   <div class="Connection_main_container">
+    <router-link class="Connection_lien_button_inscription" to="/Inscription"
+      ><button class="Connection_button_inscription">
+        Inscription
+      </button></router-link
+    >
     <div class="Connection_container_identification">
       <div class="Connection_identification_div_logo">
         <img src="@/assets/logos/logo.png" alt="Logotype" />
@@ -13,16 +18,24 @@
         <input type="password" required />
         <a class="Connection_identification_oubli_lien" href="#"
           ><p
-            @click="alertmdp =! alertmdp"
+            @click="alertmdp = !alertmdp"
             class="Connection_identification_oubli_parag"
           >
             Mot de passe oublié ?
           </p>
         </a>
-        <p id="alertmdp" v-show="alertmdp" class="connection_message_mdp_reinitialise">
+        <p
+          id="alertmdp"
+          v-show="alertmdp"
+          class="connection_message_mdp_reinitialise"
+        >
           Un mail vous à été envoyé afin de réinitialiser votre mot de passe
         </p>
-        <p id="alertRemplir"  v-show="alertRemplir" class="connection_message_remplir_champs">
+        <p
+          id="alertRemplir"
+          v-show="alertRemplir"
+          class="connection_message_remplir_champs"
+        >
           Veuillez remplir les champs demandés
         </p>
       </div>
@@ -39,24 +52,21 @@ export default {
   },
   data() {
     return {
-     alertmdp:false,
-      alertRemplir:false,
+      alertmdp: false,
+      alertRemplir: false,
     };
   },
 
-  methods: {
+  methods: {},
 
+  alertRemplirChamps() {
+    alert("Un mail vous a été envoyé pour réinitialiser votre mot de passe.");
   },
-
-   alertRemplirChamps() {
-      alert("Un mail vous a été envoyé pour réinitialiser votre mot de passe.");
-    },
 };
 </script>
 
 <style scoped lang="scss">
 $orange: #f9bb3d;
-
 
 @font-face {
   font-family: "OS_exbold";
@@ -78,8 +88,10 @@ $orange: #f9bb3d;
   font-family: "OS_semiBold";
   src: url("../assets/font/OpenSans-SemiBold.ttf");
 }
+@media screen and (min-width: 500px) {
 
 .Connection_main_container {
+  position: relative;
   width: 100vw;
   height: 100vh;
   margin: 0px;
@@ -91,6 +103,158 @@ $orange: #f9bb3d;
   align-content: center;
   background-image: url("~@/assets/images/mobile_girl_running.jpg");
   background-size: cover;
+
+  .Connection_lien_button_inscription {
+    position:absolute;
+    top:20px;
+    right:20px;
+    text-decoration: none;
+    .Connection_button_inscription {
+      font-family: "OS_medium";
+      border: none;
+      letter-spacing: 1.5px;
+      color: #f9bb3d;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 0px;
+      background: #383837;
+      display: grid;
+      grid-row: 1;
+      margin-right: 5px;
+    }
+  }
+
+  .Connection_container_identification {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+
+    .Connection_identification_div_logo {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      img {
+        width: 150%;
+      }
+    }
+    .Connection_identification_div_pseudo {
+      display: grid;
+      width: 80%;
+      label {
+        font-family: "OS_semiBold";
+        color: $orange;
+      }
+      input {
+        background: none;
+        border: 1px solid white;
+        border-radius: 5px;
+        height: 20px;
+      }
+    }
+    .Connection_identification_div_mdp {
+      display: grid;
+      width: 80%;
+      label {
+        font-family: "OS_semiBold";
+        color: $orange;
+      }
+      input {
+        background: none;
+        border: 1px solid white;
+        border-radius: 5px;
+        height: 20px;
+      }
+      .Connection_identification_oubli_lien {
+        width: 80%;
+        text-decoration: none;
+        display: grid;
+        justify-items: start;
+        align-items: start;
+        .Connection_identification_oubli_parag {
+          margin-top: 10px;
+          padding: 0px;
+          text-align: left;
+          font-size: 14px;
+          color: rgb(78, 77, 77);
+          font-family: "OS_light";
+        }
+      }
+    }
+
+    a {
+      display: grid;
+      width: 50%;
+      margin: 0px;
+      padding: 0px;
+      text-decoration: none;
+      button {
+        padding: 5px 10px;
+        height: auto;
+        background-color: $orange;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-family: "OS_semiBold";
+        font-size: 1.5em;
+        text-align: center;
+      }
+    }
+    .connection_message_mdp_reinitialise {
+      font-family: "OS_semiBold";
+      font-size: 14px;
+      color: rgb(21, 122, 7);
+    }
+    .connection_message_remplir_champs {
+      font-family: "OS_semiBold";
+      font-size: 14px;
+      color: rgb(192, 9, 9);
+    }
+  }
+}
+}
+
+
+// RESPONSIVE MOBILE
+@media screen and (max-width: 500px) {
+
+.Connection_main_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  display: Flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  background-image: url("~@/assets/images/mobile_girl_running.jpg");
+  background-size: cover;
+
+  .Connection_lien_button_inscription {
+    position:absolute;
+    top:20px;
+    right:20px;
+    text-decoration: none;
+    .Connection_button_inscription {
+      font-family: "OS_medium";
+      border: none;
+      letter-spacing: 1.5px;
+      color: #f9bb3d;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 0px;
+      background: #383837;
+      display: grid;
+      grid-row: 1;
+      margin-right: 5px;
+    }
+  }
+
   .Connection_container_identification {
     display: grid;
     justify-items: center;
@@ -171,18 +335,16 @@ $orange: #f9bb3d;
       }
     }
     .connection_message_mdp_reinitialise {
-
       font-family: "OS_semiBold";
       font-size: 14px;
       color: rgb(21, 122, 7);
     }
     .connection_message_remplir_champs {
-
       font-family: "OS_semiBold";
       font-size: 14px;
       color: rgb(192, 9, 9);
     }
   }
 }
-
+}
 </style>

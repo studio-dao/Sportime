@@ -4,7 +4,7 @@
       <!-- BLOCK LOGO -->
       <div class="Inscription_div_logo">
         <img src="@/assets/logos/logo.png" alt="Logotype" />
-        <p class="Inscription_baseline_logo">INSCRIPTION</p>
+        <p class="Inscription_baseline_logo">PROFIL</p>
       </div>
 
       <!-- BLOCK FORMULAIRE -->
@@ -33,7 +33,12 @@
 
       <!-- BLOCK BUTTON -->
       <div class="Inscription_div_bouton_enr">
-        <router-link to="/"><button>Enregistrer</button></router-link>
+        <router-link to="/Home"
+          ><button class="modifier">Modifier</button></router-link
+        >
+        <router-link to="/Home"
+          ><button class="supprimer">Supprimer</button></router-link
+        >
       </div>
     </div>
   </div>
@@ -82,6 +87,10 @@ $orange: #f9bb3d;
   src: url("../assets/font/OpenSans-SemiBold.ttf");
 }
 @media screen and (min-width: 500px) {
+  .Header_profil_lien {
+    display: none;
+  }
+
   .Inscription_main_container {
     width: 100vw;
     height: 100vh;
@@ -119,7 +128,6 @@ $orange: #f9bb3d;
         }
       }
       .Inscription_block_formulaire {
-        width: 100%;
         .Inscription_div_input {
           display: grid;
           padding: 20px 0px;
@@ -129,7 +137,7 @@ $orange: #f9bb3d;
           border-bottom: 1px solid rgba(117, 116, 116, 0.3);
 
           label {
-             font-family: "OS_medium";
+            font-family: "OS_medium";
             font-size: 20px;
             padding: 0px 10px;
             color: $orange;
@@ -152,26 +160,30 @@ $orange: #f9bb3d;
       }
       .Inscription_div_bouton_enr {
         display: grid;
-        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
 
         a {
           display: grid;
-          width: 20%;
           margin: 0px;
           padding: 0px;
           text-decoration: none;
-          justify-self: right;
+
           button {
-            margin-top: 20px;
             padding: 5px 10px;
             height: auto;
-            background-color: green;
             border-radius: 10px;
             border: none;
             color: white;
             font-family: "OS_semiBold";
             font-size: 1em;
             text-align: center;
+          }
+          .modifier {
+            background-color: rgb(21, 122, 7);
+          }
+          .supprimer {
+            background-color: rgb(192, 9, 9);
           }
         }
       }
@@ -264,7 +276,8 @@ $orange: #f9bb3d;
       }
       .Inscription_div_bouton_enr {
         display: grid;
-
+        margin-top: 20px;
+        grid-template-columns: 1fr 1fr;
 
         a {
           display: grid;
@@ -272,18 +285,22 @@ $orange: #f9bb3d;
           margin: 0px;
           padding: 0px;
           text-decoration: none;
-          justify-self: right;
+
           button {
-            margin-top: 20px;
             padding: 5px 10px;
             height: auto;
-            background-color: green;
             border-radius: 10px;
             border: none;
             color: white;
             font-family: "OS_semiBold";
             font-size: 1em;
             text-align: center;
+          }
+          .modifier {
+            background-color: rgb(21, 122, 7);
+          }
+          .supprimer {
+            background-color: rgb(192, 9, 9);
           }
         }
       }

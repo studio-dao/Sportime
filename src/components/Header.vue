@@ -15,7 +15,9 @@
       </div>
       <a class="Header_profil_lien" href="#"
         ><div class="Header_div_picto_profil">
-          <img src="@/assets/pictos/picto_profil.png" alt="picto_profil" />
+          <router-link to="/Profil">
+            <img src="@/assets/pictos/picto_profil.png" alt="picto_profil" />
+          </router-link>
         </div>
       </a>
     </header>
@@ -124,16 +126,16 @@ $orange: #f9bb3d;
   .Header_main_container {
     position: fixed;
     width: 100vw;
+    display: grid;
   }
   .Header {
     display: grid;
     width: 100%;
     background-color: rgba(32, 32, 32, 0.5);
-
-    grid-template-columns: 2fr 4fr 2fr;
+     grid-template-columns: 2fr 3.5fr 2fr;
     .Header_logo {
       display: grid;
-      padding: 5px;
+      padding: 10px 0px;
       justify-content: center;
       align-items: center;
       img {
@@ -162,12 +164,14 @@ $orange: #f9bb3d;
       }
     }
     .Header_profil_lien {
-      width: 100%;
-      height: 100%;
+     display: grid;
+      padding: 10px 0px;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+      align-items: center;
       .Header_div_picto_profil {
-        display: grid;
-        height: 100%;
-        padding: 2px;
+         display: grid;
         justify-items: center;
         align-items: center;
         img {
